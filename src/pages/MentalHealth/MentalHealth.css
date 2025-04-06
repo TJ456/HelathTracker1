@@ -1,0 +1,14 @@
+.mental-health {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .mental-health h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .mental-health p {
+    font-size: 18px;
+    color: #666;
+  }

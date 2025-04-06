@@ -1,0 +1,273 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px; /* Smaller modal width */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Close Button */
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .modal-close:hover {
+    color: #333;
+  }
+  
+  /* Mood Tracker */
+  .mood-tracker {
+    margin-bottom: 15px;
+  }
+  
+  .mood-tracker h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .mood-tracker select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .mood-tracker select:focus {
+    border-color: #3EB489;
+    outline: none;
+  }
+  
+  /* Mood Message */
+  .mood-message {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #3EB489;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Music Therapy */
+  .music-therapy {
+    margin-bottom: 15px;
+  }
+  
+  .music-therapy iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Art Therapy */
+  .art-therapy {
+    margin-bottom: 15px;
+  }
+  
+  .canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .canvas-container canvas {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    touch-action: none; /* Disable touch scrolling */
+  }
+  
+  .art-tools {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .art-tools input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .art-tools input[type="range"] {
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  .art-tools button {
+    padding: 8px 16px;
+    background-color: #3EB489;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .art-tools button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Therapy Options */
+  .therapy-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .therapy-options button {
+    padding: 10px 20px;
+    background-color: #3EB489;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .therapy-options button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Emergency Contact Section */
+  .emergency-contact {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .emergency-contact h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .emergency-contact ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .emergency-contact li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .emergency-contact a {
+    color: #3EB489;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .emergency-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 15px;
+    }
+  
+    .mood-tracker h3 {
+      font-size: 16px;
+    }
+  
+    .mood-tracker select {
+      font-size: 12px;
+    }
+  
+    .mood-message {
+      font-size: 14px;
+    }
+  
+    .therapy-options button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  
+    .emergency-contact h3 {
+      font-size: 16px;
+    }
+  
+    .emergency-contact li {
+      font-size: 12px;
+    }
+  }
+  /* Drawing Comment */
+.drawing-comment {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #3EB489;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Submit Button */
+  .art-tools button {
+    padding: 8px 16px;
+    background-color: #3EB489;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .art-tools button:hover {
+    background-color: #45a049;
+  }

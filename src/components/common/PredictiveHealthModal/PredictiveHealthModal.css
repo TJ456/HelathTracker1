@@ -1,0 +1,164 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px; /* Smaller modal width */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Close Button */
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .modal-close:hover {
+    color: #333;
+  }
+  
+  /* Form Styling */
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .modal-content label {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .modal-content input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .modal-content input:focus {
+    border-color: #3EB489;
+    outline: none;
+  }
+  
+  /* Submit Button */
+  .modal-content button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #3EB489;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-content button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Loading Bar */
+  .loading-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-top: 15px;
+    overflow: hidden;
+  }
+  
+  .loading-progress {
+    width: 0;
+    height: 100%;
+    background-color: #3EB489;
+    border-radius: 5px;
+    animation: loading 2s linear forwards;
+  }
+  
+  @keyframes loading {
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Result Message */
+  .result {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #3EB489;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 15px;
+    }
+  
+    .modal-content label {
+      font-size: 12px;
+    }
+  
+    .modal-content input {
+      font-size: 12px;
+    }
+  
+    .modal-content button[type="submit"] {
+      font-size: 12px;
+    }
+  
+    .result {
+      font-size: 14px;
+    }
+  }

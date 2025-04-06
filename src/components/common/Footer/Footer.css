@@ -1,0 +1,64 @@
+:root {
+  --header-bg: #4a6fa5;        /* Main header/nav blue */
+  --footer-bg: #2c3e50;        /* Dark footer background */
+  --accent-color: #3EB489;      /* Teal accent color */
+  --text-light: #FFFFFF;
+  --text-muted: #ecf0f1;
+  --transition-speed: 0.3s;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  padding: 25px 0 15px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.footer-tagline {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+
+.footer-accent {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 0;
+  }
+  
+  .footer-copyright {
+    font-size: 13px;
+  }
+  
+  .footer-tagline {
+    font-size: 15px;
+  }
+}

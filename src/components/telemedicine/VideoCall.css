@@ -1,0 +1,66 @@
+.video-call {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .video-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .video-wrapper {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .call-controls {
+    margin-top: 20px;
+  }
+  
+  .start-call-button, .end-call-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-call-button {
+    background-color: #3EB489;
+    color: white;
+  }
+  
+  .start-call-button:hover {
+    background-color: #45a049;
+  }
+  
+  .end-call-button {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .end-call-button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .video-container {
+      flex-direction: column;
+    }
+  
+    .video-wrapper {
+      width: 100%;
+    }
+  }

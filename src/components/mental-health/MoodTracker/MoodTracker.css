@@ -1,0 +1,38 @@
+.mood-tracker {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mood-tracker h2 {
+    margin-bottom: 20px;
+  }
+  
+  .mood-tracker label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .mood-tracker select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .mood-tracker button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3EB489;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .mood-tracker button:hover {
+    background-color: #45a049;
+  }

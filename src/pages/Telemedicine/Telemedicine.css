@@ -1,0 +1,162 @@
+/* Telemedicine.css */
+.telemedicine {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.telemedicine h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Doctor Availability Section */
+.doctor-availability {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.online-doctors {
+  color: #3EB489;
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #3EB489;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #2D8B6A;
+}
+
+/* Video Consultation Section */
+.video-consultation {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.doctor-info {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.selected-doctor h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.selected-doctor p {
+  color: #666;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+/* Features Section */
+.features-section {
+  margin: 40px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.feature-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-card h3 {
+  color: #3EB489;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #666;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  margin: 40px 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.testimonial-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.testimonial-author {
+  color: #666;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .telemedicine {
+    padding: 10px;
+  }
+
+  .doctor-availability {
+    padding: 20px;
+  }
+
+  .features-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}

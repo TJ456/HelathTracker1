@@ -1,0 +1,335 @@
+/* Base Styles */
+:root {
+  --primary: #3EB489;
+  --primary-light: #5FD0B4;
+  --primary-dark: #2E8B6E;
+  --secondary: #6e8efb;
+  --accent: #a777e3;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #495057;
+  --text: #2c3e50;
+  --error: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--light-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.healthcare-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images-cdn.ubuy.co.in/66d9cd2a1ff93739ea21c7fb-trurim-abella-danger-sexy-poster-beauty.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+.user-info, .auth-form {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(62, 180, 137, 0.2);
+}
+
+.user-info:hover, .auth-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.healthcare-icon {
+  margin-bottom: 1.5rem;
+}
+
+.healthcare-icon svg {
+  width: 60px;
+  height: 60px;
+  fill: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.user-info:hover .healthcare-icon svg,
+.auth-form:hover .healthcare-icon svg {
+  transform: scale(1.1);
+  fill: var(--primary-dark);
+}
+
+.user-info h2, .auth-form h2 {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.user-info h2::after, .auth-form h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 3px;
+}
+
+/* Profile Picture Section */
+.profile-pic-upload {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.profile-pic-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 3px solid var(--white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic-preview:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic-preview:hover::before {
+  content: 'Change Photo';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.profile-pic-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic-preview:hover img {
+  transform: scale(1.1);
+}
+
+.profile-initials {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.profile-pic-preview:hover .profile-initials {
+  transform: scale(1.1);
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid var(--medium-gray);
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--light-gray);
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(62, 180, 137, 0.2);
+  background-color: var(--white);
+}
+
+.form-group input:hover {
+  border-color: var(--primary-light);
+}
+
+/* Buttons */
+.update-btn, .auth-btn {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.update-btn::before, .auth-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.update-btn:hover::before, .auth-btn:hover::before {
+  left: 100%;
+}
+
+.update-btn:hover, .auth-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+.logout-btn {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, var(--error), #ff8e8e);
+  color: var(--white);
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #ff5252, var(--error));
+}
+
+/* Auth Switch */
+.auth-switch {
+  margin-top: 1.5rem;
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 0.3rem;
+  padding: 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.switch-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.switch-btn:hover {
+  color: var(--primary-dark);
+}
+
+.switch-btn:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-auth-container {
+    padding: 1rem;
+  }
+  
+  .user-info, .auth-form {
+    padding: 1.5rem;
+  }
+  
+  .profile-pic-preview {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .user-info h2, .auth-form h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.healthcare-icon svg {
+  animation: pulse 2s infinite;
+}
+
+.user-info:hover .healthcare-icon svg,
+.auth-form:hover .healthcare-icon svg {
+  animation: none;
+}
